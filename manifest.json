@@ -1,13 +1,11 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "version": "0.0.1",
     "name": "Tamagotchi Extension",
     "description": "Tamagotchi Extension",
     "author": "Tamagotchi Team",
-    "browser_action":{
+    "action":{
         "default_title": "Tamagotchi",
         "default_popup": "index.html"
     }
-
-
 }
