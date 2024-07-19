@@ -7,6 +7,6 @@
     "action":{
         "default_title": "Tamagotchi",
         "default_popup": "index.html",
-        "default_icon": "Tamagotchi_Icon.jpg"
+        "default_icon": "Tamagotchi_Icon.png"
     }
 }
