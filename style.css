@@ -1,0 +1,39 @@
+.container{
+    width: 250px;
+    height: 300px;
+    background-color: aqua;
+    margin-left:auto;
+    border: 8px solid black;
+}
+.tamagoshi32{
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 112px;
+    border: 1px solid black;
+}
+.tamagoshi64{
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 112px;
+    border: 1px solid black;
+}
+.tamagoshi96{
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 112px;
+    border: 1px solid black;
+}
+.tamagoshi128{
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 112px;
+    border: 1px solid black;
+}
