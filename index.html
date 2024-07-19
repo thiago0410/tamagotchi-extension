@@ -3,13 +3,27 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tamagochi</title>
+        <title>Tamagotchi</title>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="tamagoshi tamagoshi128"></div>
+            <h1>Tamagotchi Web</h1>
+            <div class="tamagotchi">
+                <img id="tamagotchi-image" src="Tamagotchi_Icon.png" alt="Tamagotchi">
+            </div>
+            <div class="controls">
+                <button onclick="alimentar()">Alimentar</button>
+                <button onclick="brincar()">Brincar</button>
+                <button onclick="limpar()">Limpar</button>
+            </div>
+            <div class="status">
+                <p>Fome: <span id="fome">0</span></p>
+                <p>Felicidade: <span id="felicidade">10</span></p>
+                <p>Limpeza: <span id="limpeza">10</span></p>
+            </div>
         </div>
         <h1>Hello World</h1>
     </body>

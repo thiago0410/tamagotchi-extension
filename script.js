@@ -31,9 +31,9 @@ function decreaseStatus() {
     limpeza = Math.max(limpeza - 1, 0);
     updateStatus();
 
-    if (fome === 10 || felicidade === 0 || limpeza === 0) {
+    /*if (fome === 10 || felicidade === 0 || limpeza === 0) {
         alert('Seu Tamagotchi está em mau estado!');
-    }
+    }*/
 }
 
 setInterval(decreaseStatus, 5000);
