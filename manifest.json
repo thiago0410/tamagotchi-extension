@@ -2,6 +2,8 @@
     "manifest_version": 2,
     "version": "0.0.1",
     "name": "Tamagotchi Extension",
-    "description": "Tamagotchi Extension"
+    "description": "Tamagotchi Extension",
+    "author": "Tamagotchi Team",
+    
 
 }
