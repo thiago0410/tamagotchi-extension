@@ -4,6 +4,11 @@
     "name": "Tamagotchi Extension",
     "description": "Tamagotchi Extension",
     "author": "Tamagotchi Team",
+    "content_scripts": [
+        {
+            "js": ["script/script.js"]
+        }
+    ],
     "action":{
         "default_title": "Tamagotchi",
         "default_popup": "index.html",
@@ -12,6 +17,5 @@
             "48": "images/icon48.png",
             "128": "images/icon128.png"
         }
-
     }
 }
