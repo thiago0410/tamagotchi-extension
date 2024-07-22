@@ -21,7 +21,21 @@
     border-color: yellow; 
 }
 .controls{
+    width: 250px;
     bottom: 0;
     border: 1px solid black;
     position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bAlimentar{
+    align-self: flex-start;
+}
+.bBrincar{
+    align-self: center; 
+}
+.bLavar{
+    align-self: flex-end;
 }
