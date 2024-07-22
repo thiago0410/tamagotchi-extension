@@ -39,3 +39,12 @@
 .bLavar{
     align-self: flex-end;
 }
+
+.bar, .bar-container {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
