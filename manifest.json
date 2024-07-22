@@ -8,12 +8,6 @@
         "activeTab",
         "storage"
     ],
-    /*"content_scripts": [
-        {
-            "js": ["script/script.js"],
-            "matches": 
-        }
-    ],*/
     "action":{
         "default_title": "Tamagotchi",
         "default_popup": "index.html",
