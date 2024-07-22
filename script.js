@@ -2,6 +2,15 @@ let fome = 0;
 let felicidade = 10;
 let limpeza = 10;
 
+const btnAlimentar = document.getElementById('alimentar');
+const btnBrincar = document.getElementById('brincar');
+const btnLimpar = document.getElementById('limpar');
+
+btnAlimentar.addEventListener('click', alimentar());
+btnBrincar.addEventListener('click', brincar());
+btnLimpar.addEventListener('click', limpar());
+
+
 function updateStatus() {
     document.getElementById('fome').innerText = fome;
     document.getElementById('felicidade').innerText = felicidade;

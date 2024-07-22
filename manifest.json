@@ -4,6 +4,9 @@
     "name": "Tamagotchi Extension",
     "description": "Tamagotchi Extension",
     "author": "Tamagotchi Team",
+    "background": {
+        "service_worker": "background.js"
+    },
     "permissions": [
         "activeTab",
         "scripting"
