@@ -4,10 +4,9 @@
     "name": "Tamagotchi Extension",
     "description": "Tamagotchi Extension",
     "author": "Tamagotchi Team",
-    "content_scripts": [
-        {
-            "js": ["script/script.js"]
-        }
+    "permissions": [
+        "activeTab",
+        "storage"
     ],
     "action":{
         "default_title": "Tamagotchi",
