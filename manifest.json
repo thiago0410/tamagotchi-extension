@@ -6,7 +6,7 @@
     "author": "Tamagotchi Team",
     "permissions": [
         "activeTab",
-        "storage"
+        "scripting"
     ],
     "action":{
         "default_title": "Tamagotchi",
