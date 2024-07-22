@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tamagotchi</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="status">
-                <div class="status-item">
-                    <div class="bar" id="bar-fome">
-                        <div class="bar" style="height: 0;" id="bar-fome-inner"></div>
-                    </div>
-                    <p>Fome: <span id="fome">0</span></p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="status">
+            <div class="status-item">
+                <div class="bar" id="bar-fome">
+                    <div class="bar-inner" style="height: 0;" id="bar-fome-inner"></div>
                 </div>
-                <div class="status-item">
-                    <div class="bar" id="bar-felicidade">
-                        <div class="bar" style="height: 100%;" id="bar-felicidade-inner"></div>
-                    </div>
-                    <p>Felicidade: <span id="felicidade">10</span></p>
-                </div>
-                <div class="status-item">
-                    <div class="bar-container" id="bar-limpeza">
-                        <div class="bar" style="height: 100%;" id="bar-limpeza-inner"></div>
-                    </div>
-                    <p>Limpeza: <span id="limpeza">10</span></p>
-                </div>
+                <p>Fome: <span id="fome">0</span></p>
             </div>
-            <div class="tamagotchi tamagotchi128"></div>
-            <div class="tamagotchi">
-                <img id="tamagotchi-image" src="images/teste redimensionar 2 (1).gif" alt="Tamagotchi">
+            <div class="status-item">
+                <div class="bar" id="bar-felicidade">
+                    <div class="bar-inner" style="height: 100%;" id="bar-felicidade-inner"></div>
+                </div>
+                <p>Felicidade: <span id="felicidade">10</span></p>
             </div>
-            <div class="controls">
-                <button id="alimentar" class="bAlimentar">Alimentar</button>
-                <button id="brincar" class="bBrincar">Brincar</button>
-                <button id="limpar" class="bLavar">Limpar</button>
+            <div class="status-item">
+                <div class="bar" id="bar-limpeza">
+                    <div class="bar-inner" style="height: 100%;" id="bar-limpeza-inner"></div>
+                </div>
+                <p>Limpeza: <span id="limpeza">10</span></p>
             </div>
         </div>
-    </body>
+        <div class="tamagotchi tamagotchi128"></div>
+        <div class="tamagotchi">
+            <img id="tamagotchi-image" src="images/teste redimensionar 2 (1).gif" alt="Tamagotchi">
+        </div>
+        <div class="controls">
+            <button id="alimentar" class="bAlimentar">Alimentar</button>
+            <button id="brincar" class="bBrincar">Brincar</button>
+            <button id="limpar" class="bLavar">Limpar</button>
+        </div>
+    </div>
+</body>
 </html>
