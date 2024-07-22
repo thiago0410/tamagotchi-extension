@@ -19,6 +19,7 @@
     width: 128px;
     height: 128px;
     border-color: yellow; 
+    background-image: teste.jpg;
 }
 .controls{
     width: 250px;
