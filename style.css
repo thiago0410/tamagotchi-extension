@@ -20,3 +20,8 @@
     height: 128px;
     border-color: yellow; 
 }
+.controls{
+    bottom: 0;
+    border: 1px solid black;
+    position: absolute;
+}
