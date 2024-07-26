@@ -1,2 +1,2 @@
 # tamagotchi-plugin
-oi
+oi, tudo bem?
