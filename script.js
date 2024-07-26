@@ -34,7 +34,7 @@ function alimentar() {
 }
 
 function brincar() {
-    felicidade = Math.min(felicidade + 2, 10);
+    felicidade = Math.min(felicidade + 1, 10);
     limpeza = Math.max(limpeza - 1, 0);
     updateStatus();
     ab = ab - 10;
