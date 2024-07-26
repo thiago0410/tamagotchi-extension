@@ -13,7 +13,37 @@ btnAlimentar.addEventListener('click', alimentar);
 btnBrincar.addEventListener('click', brincar);
 btnLimpar.addEventListener('click', limpar);
 
+const gif = document.getElementById("gif");
+const gifDuration = 12000;
 
+gif.addEventListener("DOMContentLoaded", troca_gif());
+
+function troca_gif(){
+    if(gif){
+        setTimeout(function() {
+            gif.src = 'images/teste.jpg';
+          }, gifDuration);
+    } else {
+        console.error("Deu não");
+    }
+    
+}
+
+/*document.addEventListener('DOMContentLoaded', function() {
+    const gif = document.getElementById("gif");
+    
+    if (gif) {
+      const gifDuration = 12000; // Duração estimada do GIF em milissegundos
+      
+      setTimeout(function() {
+        // Substitui o GIF pela imagem estática
+        gif.src = 'images/teste.png';
+      }, gifDuration);
+    } else {
+      console.error("Elemento com ID 'meuGif' não encontrado.");
+    }
+  });
+  */
 
 function updateStatus() {
     document.getElementById('fome').innerText = fome;
