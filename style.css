@@ -1,0 +1,75 @@
+.container {
+    width: 250px;
+    height: 300px;
+    background-color: aqua;
+    margin-left: auto;
+    border: 8px solid black;
+    position: relative;
+}
+
+.tamagotchi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tamagotchi128 {
+    width: 128px;
+    height: 128px;
+}
+
+.controls {
+    width: 250px;
+    bottom: 0;
+    border: 1px solid black;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bAlimentar {
+    align-self: flex-start;
+}
+
+.bBrincar {
+    align-self: center; 
+}
+
+.bLavar {
+    align-self: flex-end;
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.status-item {
+    width: 95%;
+    margin: 1px 0;
+}
+
+.bar {
+    width: 100%;
+    height: 10px;
+    background-color: red;
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 0;
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+.barint {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+}
+
+.status-item p {
+    display: none;
+}
