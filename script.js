@@ -98,6 +98,29 @@ function decreaseStatus() {
     updateStatus();
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const limpezaInput = document.getElementById('barintLimpeza');
+  const brincarInput = document.getElementById('barintBrincar');
+  const fomeInput = document.getElementById('barintFome');
+
+  // Carregar valores salvos ao abrir a janela
+  chrome.storage.sync.get(['barintLimpeza', 'barintBrincar', 'barintFome'], function(result) {
+    if (result.barintLimpeza) limpezaInput.value = result.barintLimpeza;
+    if (result.barintBrincar) brincarInput.value = result.barintBrincar;
+    if (result.barintFome) fomeInput.value = result.barintFome;
+  }); 
+});
+
+window.addEventListener('beforeunload', function() {
+  const barintLimpeza = limpezaInput.value;
+  const barintBrincar = brincarInput.value;
+  const barintFome = fomeInput.value;
+
+  chrome.storage.sync.set({ barintLimpeza: barintLimpeza, barintBrincar: barintBrincar, barintFome: barintFome }, function() {
+    console.log('Valores salvos ao fechar:', { barintLimpeza, barintBrincar, barintFome });
+  });
+});
+
 setInterval(decreaseStatus, 5000);
 
 document.addEventListener('DOMContentLoaded', updateStatus);
