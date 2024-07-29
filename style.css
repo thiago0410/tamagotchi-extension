@@ -41,7 +41,7 @@
 }
 
 .bar, .bar-container {
-    width: 35px;
+    width: 200px;
     height: 35px;
     background-color: red;
     display: flex;
