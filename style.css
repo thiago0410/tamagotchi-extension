@@ -30,18 +30,6 @@
     align-items: center;
 }
 
-/* .bAlimentar {
-    align-self: flex-start;
-}
-
-.bBrincar {
-    align-self: center; 
-}
-
-.bLavar {
-    align-self: flex-end;
-} */
-
 .status {
     display: flex;
     flex-direction: column;
@@ -79,9 +67,6 @@
 }
 
 /*nycolle*/
-#alimentar{
-
-}
 
 .alimento{
     width: 32px;
