@@ -30,18 +30,18 @@
             </div>
         </div>
         <div class="tamagotchi tamagotchi128"></div>
-        <div class="tamagotchi">
+        <div class="tamagotchi"  ondrop="drop(event)" ondragover="allowDrop(event)">
             <img id="gif" src="images/teste redimensionar 2 (1).gif"alt="Tamagotchi">
         </div>
         <div class="controls">
             <div class="alimento">
-                <button  class="bAlimentar" draggable="true" id="alimentar"></button>
+                <button  class="bAlimentar" draggable="true" id="alimentar" ondragstart="drag(event, this)"></button>
             </div>
             <div class="brinquedo">
-                <button class="bBrincar" draggable="true" id="brincar"></button>
+                <button class="bBrincar" draggable="true" id="brincar" ondragstart="drag(event, this)"></button>
             </div>
             <div class="banho">
-                <button class="bLavar" draggable="true" id="limpar"></button>
+                <button class="bLavar" draggable="true" id="limpar" ondragstart="drag(event, this)"></button>
             </div>
         </div>
     </div>
