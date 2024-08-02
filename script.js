@@ -1,9 +1,9 @@
 let fome = 0;
 let felicidade = 10;
 let limpeza = 10;
-ab = 100;
-ac = 100;
-ad = 0;
+ab = parseInt(localStorage.getItem('ab')) || 100;
+ac = parseInt(localStorage.getItem('ac')) || 100;
+ad = parseInt(localStorage.getItem('ad')) || 0;
 
 const btnAlimentar = document.getElementById('alimentar');
 const btnBrincar = document.getElementById('brincar');
