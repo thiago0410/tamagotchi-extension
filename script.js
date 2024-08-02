@@ -9,7 +9,7 @@ const btnAlimentar = document.getElementById('alimentar');
 const btnBrincar = document.getElementById('brincar');
 const btnLimpar = document.getElementById('limpar');
 
-btnAlimentar.addEventListener('drag', alimentar);
+btnAlimentar.addEventListener('click', alimentar);
 btnBrincar.addEventListener('click', brincar);
 btnLimpar.addEventListener('click', limpar);
 
