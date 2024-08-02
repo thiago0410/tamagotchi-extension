@@ -20,7 +20,7 @@
 }
 
 .controls {
-    height: 32px;
+    height: 35px;
     width: 250px;
     bottom: 0; 
     /* border: 1px solid black; */
@@ -28,6 +28,7 @@
      /* display: flex;  */
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 3px;
 }
 
 /* .bAlimentar {
@@ -80,15 +81,23 @@
 
 /*nycolle*/
 #alimentar{
-
+    background-image: url(images/melancia2.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    background-size: 32px 32px;
 }
 
 .alimento{
     width: 32px;
     height: 32px;
     float: left;
-    padding-right: 77px;
-    align-self: flex-start;
+    padding-left: 4px;
+    padding-right: 73px;
+    /* background-image: url(images/melancia2.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center; */
 }
 
 .brinquedo{
@@ -96,17 +105,20 @@
     height: 32px;
     float: left;
     align-items: center;
-    padding-right: 77px; 
+    padding-right: 73px; 
 }
 
 .banho{
     width: 32px;
     height: 32px;
     float: left;
+    padding-right: 4px;
 }
 
 button{
     width: 32px;
     height: 32px;
-    align-self: flex-end
+    align-self: flex-end; 
+    border: solid black 1px;
+    background-color: transparent;
 }
