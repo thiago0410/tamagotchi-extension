@@ -31,18 +31,6 @@
     padding-bottom: 3px;
 }
 
-/* .bAlimentar {
-    align-self: flex-start;
-}
-
-.bBrincar {
-    align-self: center; 
-}
-
-.bLavar {
-    align-self: flex-end;
-} */
-
 .status {
     display: flex;
     flex-direction: column;
@@ -81,11 +69,7 @@
 
 /*nycolle*/
 #alimentar{
-    background-image: url(images/melancia2.png);
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-position: center;
-    background-size: 32px 32px;
+
 }
 
 .alimento{
@@ -118,7 +102,5 @@
 button{
     width: 32px;
     height: 32px;
-    align-self: flex-end; 
-    border: solid black 1px;
-    background-color: transparent;
+    align-self: flex-end
 }
