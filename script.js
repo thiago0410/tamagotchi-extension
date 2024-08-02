@@ -3,7 +3,7 @@ let felicidade = 10;
 let limpeza = 10;
 ab = 100;
 ac = 100;
-ad = 0;
+ad = 100;
 
 const btnAlimentar = document.getElementById('alimentar');
 const btnBrincar = document.getElementById('brincar');
@@ -29,7 +29,7 @@ document.querySelector('.barintBrincar').style.width = ac + "%";
 document.querySelector('.barintFome').style.width = ad + "%";
 
 function alimentar() {
-  fome = Math.max(fome - 1, 10);
+  fome = Math.max(fome + 1, 10);
   felicidade = Math.min(felicidade + 1, 10);
   document.querySelector('.barintFome').style.width = ad + "%";
   ad = ad + 10;
