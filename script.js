@@ -9,7 +9,7 @@ const btnAlimentar = document.getElementById('alimentar');
 const btnBrincar = document.getElementById('brincar');
 const btnLimpar = document.getElementById('limpar');
 
-btnAlimentar.addEventListener('click', alimentar);
+btnAlimentar.addEventListener('drag', alimentar);
 btnBrincar.addEventListener('click', brincar);
 btnLimpar.addEventListener('click', limpar);
 
@@ -28,22 +28,6 @@ function troca_gif() {
   }
 
 }
-
-/*document.addEventListener('DOMContentLoaded', function() {
-    const gif = document.getElementById("gif");
-    
-    if (gif) {
-      const gifDuration = 12000; // Duração estimada do GIF em milissegundos
-      
-      setTimeout(function() {
-        // Substitui o GIF pela imagem estática
-        gif.src = 'images/teste.png';
-      }, gifDuration);
-    } else {
-      console.error("Elemento com ID 'meuGif' não encontrado.");
-    }
-  });
-  */
 
 function updateStatus() {
   document.getElementById('fome').innerText = fome;
@@ -97,29 +81,6 @@ function decreaseStatus() {
   document.querySelector('.barintFome').style.width = ad + "%";
   updateStatus();
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  const limpezaInput = document.getElementById('barintLimpeza');
-  const brincarInput = document.getElementById('barintBrincar');
-  const fomeInput = document.getElementById('barintFome');
-
-  // Carregar valores salvos ao abrir a janela
-  chrome.storage.sync.get(['barintLimpeza', 'barintBrincar', 'barintFome'], function(result) {
-    if (result.barintLimpeza) limpezaInput.value = result.barintLimpeza;
-    if (result.barintBrincar) brincarInput.value = result.barintBrincar;
-    if (result.barintFome) fomeInput.value = result.barintFome;
-  }); 
-});
-
-window.addEventListener('beforeunload', function() {
-  const barintLimpeza = limpezaInput.value;
-  const barintBrincar = brincarInput.value;
-  const barintFome = fomeInput.value;
-
-  chrome.storage.sync.set({ barintLimpeza: barintLimpeza, barintBrincar: barintBrincar, barintFome: barintFome }, function() {
-    console.log('Valores salvos ao fechar:', { barintLimpeza, barintBrincar, barintFome });
-  });
-});
 
 setInterval(decreaseStatus, 5000);
 
