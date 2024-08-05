@@ -45,14 +45,14 @@ const btnLimpar = document.getElementById('limpar');
 
 /* GIF */
 const gif = document.getElementById("gif");
-const gifDuration = 12000;
+const gifDuration = 11800;
 
 gif.addEventListener("DOMContentLoaded", troca_gif());
 
 function troca_gif() {
   if (gif) {
     setTimeout(function () {
-      gif.src = 'images/teste.jpg';
+      gif.src = 'images/pintinho_parado.png';
     }, gifDuration);
   } else {
     console.error("Deu não");
