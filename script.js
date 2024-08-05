@@ -1,4 +1,4 @@
-/* localStorage 
+localStorage 
 var estado = {
   fome: 10, 
   felicidade: 10,
@@ -6,7 +6,7 @@ var estado = {
   limpo: 100,
   feliz: 100,
   satisfeito: 100
-};*/
+};
 
 var estado;
 
@@ -22,22 +22,20 @@ function recuperaEstado(){
   console.log("Recupera estado");
 }
 
-window.onload = function(){
-  if (localStorage.estado){
-    recuperaEstado();
-  }
-  else {
-    var estado = {
-      fome: 10, 
-      felicidade: 10,
-      limpeza : 10,
-      limpo: 100,
-      feliz: 100,
-      satisfeito: 100
-    };
-  }
-};
-
+// window.onload = function(){
+//   if (localStorage.estado){
+//     recuperaEstado();
+//   }
+//   else {
+//     var estado = {
+//       fome: 10, 
+//       felicidade: 10,
+//       limpeza : 10,
+//       limpo: 100,
+//       feliz: 100,
+//       satisfeito: 100
+//     };
+//   }
 
 const btnAlimentar = document.getElementById('alimentar');
 const btnBrincar = document.getElementById('brincar');
@@ -59,9 +57,9 @@ function troca_gif() {
   }
 }
 
-/*document.querySelector('.barintLimpeza').style.width = estado.limpo + "%";
+document.querySelector('.barintLimpeza').style.width = estado.limpo + "%";
 document.querySelector('.barintBrincar').style.width = estado.feliz + "%";
-document.querySelector('.barintFome').style.width = estado.satisfeito + "%";*/
+document.querySelector('.barintFome').style.width = estado.satisfeito + "%";
 
 function barras() {
   document.querySelector('.barintLimpeza').style.width = estado.limpo + "%";
@@ -109,7 +107,12 @@ function decreaseStatus() {
   estado.feliz = estado.feliz - 10;
   estado.limpeza = Math.max(estado.limpeza - 1, 0);
   estado.limpo = estado.limpo - 10;
-  console.log
+  if (estado.feliz < 0){
+    estado.feliz = 0;
+  } 
+  if (estado.satisfeito < 0){
+    estado.satisfeito = 0;
+  }
   barras();
 }
 
