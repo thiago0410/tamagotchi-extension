@@ -36,8 +36,6 @@ function recuperaEstado(){
 //       satisfeito: 100
 //     };
 //   }
-// }
-
 
 const btnAlimentar = document.getElementById('alimentar');
 const btnBrincar = document.getElementById('brincar');
