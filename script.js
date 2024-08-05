@@ -1,9 +1,9 @@
 let fome = 10;
 let felicidade = 10;
 let limpeza = 10;
-ab = 100;
-ac = 100;
-ad = 100;
+limpo = 100;
+feliz = 100;
+faminto = 100;
 
 const btnAlimentar = document.getElementById('alimentar');
 const btnBrincar = document.getElementById('brincar');
@@ -24,50 +24,58 @@ function troca_gif() {
   }
 }
 
-document.querySelector('.barintLimpeza').style.width = ab + "%";
-document.querySelector('.barintBrincar').style.width = ac + "%";
-document.querySelector('.barintFome').style.width = ad + "%";
+document.querySelector('.barintLimpeza').style.width = limpo + "%";
+document.querySelector('.barintBrincar').style.width = feliz + "%";
+document.querySelector('.barintFome').style.width = faminto + "%";
 
 function barras() {
-  document.querySelector('.barintLimpeza').style.width = ab + "%";
-  document.querySelector('.barintBrincar').style.width = ac + "%";
-  document.querySelector('.barintFome').style.width = ad + "%";
+  document.querySelector('.barintLimpeza').style.width = limpo + "%";
+  document.querySelector('.barintBrincar').style.width = feliz + "%";
+  document.querySelector('.barintFome').style.width = faminto + "%";
 }
+
+//a barra de felicidade é autonoma
 
 function alimentar() {
   fome = Math.max(fome + 1, 10);
   felicidade = Math.max(felicidade + 1, 10);
-  document.querySelector('.barintFome').style.width = ad + "%";
-  ad = ad + 10;
-  console.log("alimentando:" + ad);
+  document.querySelector('.barintFome').style.width = faminto + "%";
+  faminto = faminto + 10;
+  if(faminto > 100){
+    faminto = 100;
+  }
+  console.log("alimentando:" + faminto);
   barras();
 }
 
 function brincar() {
   felicidade = Math.max(felicidade + 1, 10);
   limpeza = Math.max(limpeza - 1, 0);
-  ab = ab - 10;
-  ac = ac + 10;
-  ad = ad + 10;
+  limpo = limpo - 10;
+  feliz = feliz + 10;
+  if(feliz > 100){
+    feliz = 100;
+  }
+  console.log("FELICIDADE:" + feliz);
   barras();
 }
 
 function limpar() {
   limpeza = 10;
-  ab = 100;
+  limpo = 100;
   barras();
 }
 
 function decreaseStatus() {
-  fome = Math.min(fome - 1, 10);
-  ad = ad - 10;
+  fome = Math.max(fome - 1, 10);
+  faminto = faminto - 10;
   felicidade = Math.max(felicidade - 1, 0);
-  ac = ac - 10;
+  feliz = feliz - 10;
   limpeza = Math.max(limpeza - 1, 0);
-  ab = ab - 10;
-  document.querySelector('.barintLimpeza').style.width = ab + "%";
-  document.querySelector('.barintBrincar').style.width = ac + "%";
-  document.querySelector('.barintFome').style.width = ad + "%";
+  limpo = limpo - 10;
+  document.querySelector('.barintLimpeza').style.width = limpo + "%";
+  document.querySelector('.barintBrincar').style.width = feliz + "%";
+  document.querySelector('.barintFome').style.width = faminto + "%";
 }
 
 setInterval(decreaseStatus, 5000);
@@ -95,9 +103,12 @@ function drop(event,target) {
   console.log("--" + data);
   if (data == 'alimentar') {
     alimentar();
-    console.log("aa" + data);
-  }
-  else if(data == 'limpar'){
+    console.log("a" + data);
+  } else if(data == 'limpar'){
     limpar();
+    console.log("f" + data);
+  } else if(data == 'brincar'){
+    brincar();
+    console.log("b" + data);
   }
 }
