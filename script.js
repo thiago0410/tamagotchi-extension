@@ -28,32 +28,34 @@ document.querySelector('.barintLimpeza').style.width = ab + "%";
 document.querySelector('.barintBrincar').style.width = ac + "%";
 document.querySelector('.barintFome').style.width = ad + "%";
 
+function barras() {
+  document.querySelector('.barintLimpeza').style.width = ab + "%";
+  document.querySelector('.barintBrincar').style.width = ac + "%";
+  document.querySelector('.barintFome').style.width = ad + "%";
+}
+
 function alimentar() {
   fome = Math.max(fome + 1, 10);
-  felicidade = Math.min(felicidade + 1, 10);
+  felicidade = Math.max(felicidade + 1, 10);
   document.querySelector('.barintFome').style.width = ad + "%";
   ad = ad + 10;
   console.log("alimentando:" + ad);
+  barras();
 }
 
 function brincar() {
-  felicidade = Math.min(felicidade + 1, 10);
+  felicidade = Math.max(felicidade + 1, 10);
   limpeza = Math.max(limpeza - 1, 0);
   ab = ab - 10;
   ac = ac + 10;
   ad = ad + 10;
-  document.querySelector('.barintLimpeza').style.width = ab + "%";
-  document.querySelector('.barintBrincar').style.width = ac + "%";
-  document.querySelector('.barintFome').style.width = ad + "%";
-
+  barras();
 }
 
 function limpar() {
   limpeza = 10;
   ab = 100;
-  document.querySelector('.barintLimpeza').style.width = ab + "%";
-  document.querySelector('.barintBrincar').style.width = ac + "%";
-  document.querySelector('.barintFome').style.width = ad + "%";
+  barras();
 }
 
 function decreaseStatus() {
