@@ -3,7 +3,7 @@ let felicidade = 10;
 let limpeza = 10;
 limpo = 100;
 feliz = 100;
-faminto = 100;
+satisfeito = 100;
 
 const btnAlimentar = document.getElementById('alimentar');
 const btnBrincar = document.getElementById('brincar');
@@ -26,25 +26,25 @@ function troca_gif() {
 
 document.querySelector('.barintLimpeza').style.width = limpo + "%";
 document.querySelector('.barintBrincar').style.width = feliz + "%";
-document.querySelector('.barintFome').style.width = faminto + "%";
+document.querySelector('.barintFome').style.width = satisfeito + "%";
 
 function barras() {
   document.querySelector('.barintLimpeza').style.width = limpo + "%";
   document.querySelector('.barintBrincar').style.width = feliz + "%";
-  document.querySelector('.barintFome').style.width = faminto + "%";
+  document.querySelector('.barintFome').style.width = satisfeito + "%";
 }
 
 //a barra de felicidade é autonoma
-
+// esse if do alimentar e brincar funciona como limitador, 
 function alimentar() {
   fome = Math.max(fome + 1, 10);
   felicidade = Math.max(felicidade + 1, 10);
-  document.querySelector('.barintFome').style.width = faminto + "%";
-  faminto = faminto + 10;
-  if(faminto > 100){
-    faminto = 100;
+  document.querySelector('.barintFome').style.width = satisfeito + "%";
+  satisfeito = satisfeito + 10;
+  if(satisfeito > 100){
+    satisfeito = 100;
   }
-  console.log("alimentando:" + faminto);
+  console.log("alimentando:" + satisfeito);
   barras();
 }
 
@@ -68,14 +68,13 @@ function limpar() {
 
 function decreaseStatus() {
   fome = Math.max(fome - 1, 10);
-  faminto = faminto - 10;
+  satisfeito = satisfeito - 10;
   felicidade = Math.max(felicidade - 1, 0);
   feliz = feliz - 10;
   limpeza = Math.max(limpeza - 1, 0);
   limpo = limpo - 10;
-  document.querySelector('.barintLimpeza').style.width = limpo + "%";
-  document.querySelector('.barintBrincar').style.width = feliz + "%";
-  document.querySelector('.barintFome').style.width = faminto + "%";
+  console.log
+  barras();
 }
 
 setInterval(decreaseStatus, 5000);
@@ -103,12 +102,9 @@ function drop(event,target) {
   console.log("--" + data);
   if (data == 'alimentar') {
     alimentar();
-    console.log("a" + data);
   } else if(data == 'limpar'){
     limpar();
-    console.log("f" + data);
   } else if(data == 'brincar'){
     brincar();
-    console.log("b" + data);
   }
 }
